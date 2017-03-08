@@ -1,0 +1,13 @@
+#!ipxe
+:retry
+dhcp
+chain https://brimstone.github.io/boot || goto menu
+
+:menu
+menu Please choose an option
+item retry	Retry DHCP and fetching from https://brimstone.github.io/boot
+item exit	Let something else try to boot
+choose --default retry --timeout 10000 target && goto ${target}
+
+:exit
+exit
