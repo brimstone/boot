@@ -1,3 +1,38 @@
+diff --git a/src/config/console.h b/src/config/console.h
+index 9f770d09..b8bb0816 100644
+--- a/src/config/console.h
++++ b/src/config/console.h
+@@ -34,7 +34,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
+  *
+  */
+ 
+-//#define	CONSOLE_SERIAL		/* Serial port console */
++#define	CONSOLE_SERIAL ( CONSOLE_USAGE_ALL | CONSOLE_USAGE_LOG )	/* Serial port console */
+ //#define	CONSOLE_FRAMEBUFFER	/* Graphical framebuffer console */
+ //#define	CONSOLE_SYSLOG		/* Syslog console */
+ //#define	CONSOLE_SYSLOGS		/* Encrypted syslog console */
+@@ -59,7 +59,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
+  *
+  * Note that this is not related in any way to CONSOLE_SYSLOG.
+  */
+-#define	LOG_LEVEL	LOG_NONE
++#define	LOG_LEVEL	LOG_ALL
+ 
+ #include <config/named.h>
+ #include NAMED_CONFIG(console.h)
+diff --git a/src/config/defaults/pcbios.h b/src/config/defaults/pcbios.h
+index e1915054..af05b468 100644
+--- a/src/config/defaults/pcbios.h
++++ b/src/config/defaults/pcbios.h
+@@ -13,7 +13,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
+ #define IOAPI_X86
+ #define PCIAPI_PCBIOS
+ #define TIMER_PCBIOS
+-#define CONSOLE_PCBIOS
++#define CONSOLE_PCBIOS ( CONSOLE_USAGE_ALL | CONSOLE_USAGE_LOG )
+ #define NAP_PCBIOS
+ #define UMALLOC_MEMTOP
+ #define SMBIOS_PCBIOS
 diff --git a/src/config/general.h b/src/config/general.h
 index fb1ac93f..7621e88b 100644
 --- a/src/config/general.h
