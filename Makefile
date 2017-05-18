@@ -1,7 +1,10 @@
-ipxe/src/bin/ipxe.lkrn:
+bin/brimstone.iso bin/brimstone.lkrn:
 	cd ipxe/src \
-	&& patch -p0 ipxe.patch \
-	&& make CERT=../../github.crt \
-		TRUST=../../github.crt \
+	&& patch -p2 < ../../ipxe.patch \
+	&& make CERT=../../DigiCertSHA2HighAssuranceServerCA.pem \
+		TRUST=../../DigiCertSHA2HighAssuranceServerCA.pem \
 		EMBED=../../github.ipxe \
-		bin/ipxe.lkrn bin/ipxe.iso
+		bin/ipxe.lkrn bin/ipxe.iso \
+	&& cp bin/ipxe.iso ../../bin/brimstone.iso \
+	&& cp bin/ipxe.lkrn ../../bin/brimstone.lkrn \
+	&& patch -p2 -R < ../../ipxe.patch

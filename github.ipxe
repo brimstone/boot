@@ -4,12 +4,12 @@ dhcp
 show ip
 show gateway
 show dns
-chain https://brimstone.github.io/boot || goto menu
+chain https://brimstone.github.io/boot/boot || goto menu
 
 :menu
 sleep 10
 menu Please choose an option
-item retry	Retry DHCP and fetching from https://brimstone.github.io/boot
+item retry	Retry DHCP and fetching from https://brimstone.github.io/boot/boot
 item shell	Open a shell and debug from there
 item exit	Let something else try to boot
 choose --default retry --timeout 10000 target && goto ${target}
