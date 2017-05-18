@@ -1,4 +1,4 @@
-bin/brimstone.iso bin/brimstone.lkrn:
+bin/brimstone.iso bin/brimstone.lkrn: github.ipxe ipxe.patch
 	cd ipxe/src \
 	&& patch -p2 < ../../ipxe.patch \
 	&& make CERT=../../DigiCertSHA2HighAssuranceServerCA.pem \
@@ -8,3 +8,7 @@ bin/brimstone.iso bin/brimstone.lkrn:
 	&& cp bin/ipxe.iso ../../bin/brimstone.iso \
 	&& cp bin/ipxe.lkrn ../../bin/brimstone.lkrn \
 	&& patch -p2 -R < ../../ipxe.patch
+
+.PHONY: kvm
+kvm:
+	kvm -cdrom bin/brimstone.iso -m 512

@@ -1,2 +1,22 @@
+<link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+<title>brimstone's boot iso/kernel</title>
+<a href="https://github.com/brimstone/boot"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 <h1>brimstone's boot iso/kernel</h1>
-Download the <a href="bin/brimstone.iso">iso</a> or <a href="bin/brimstone.lkrn">kernel</a> and get booting.
+<h4 style="text-align: center"><a href="bin/brimstone.iso">.iso</a> - <a href="bin/brimstone.lkrn">.kernel</a></h4>
+
+<p>This is a custom build of <a href="https://ipxe.org/">ipxe</a> that calls
+back to a script at this url when it boots. This way, the installer files for
+various Linux operating systems are downloaded at every boot, directly from the
+appropriate mirrors. This keeps the total download for you small and fast, as
+well as keeping the installer files up to date.</p>
+
+<p>Provided are two download options:</p>
+<p><b><a href="bin/brimstone.iso">iso format</a></b> - This format is a valid
+iso9660 CD image, ready to be used in a VM, burned to optical media, you name
+it. This file can be directly written to a USB drive as well.
+
+<p><b><a href="bin/brimstone.lkrn">kernel format</a></b> - This format is a
+valid ELF kernel. It can be used where you already have a boot environment,
+perhaps an existing PXE setup, a USB drive with <a href="http://grub4dos.org/">
+grub4dos</a> or <a href="http://www.syslinux.org/">syslinux</a>.
+
