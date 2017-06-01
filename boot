@@ -15,6 +15,8 @@ shell
 
 :debian
 menu Please choose a release
+item menu (back)
+item debian-stable Debian Stable
 item debian-testing Debian Testing
 choose release && goto ${release}
 
@@ -31,6 +33,7 @@ boot
 
 :centos
 menu Please choose a release
+item menu (back)
 item centos-7 7 Latest
 item centos-6 6
 choose release && goto ${release}
@@ -48,6 +51,7 @@ boot
 
 :ubuntu
 menu Please choose a release
+item menu (back)
 item ubuntu-trusty Trusty Tahr 14.04 LTS
 item ubuntu-vivid Vivid Vervet 15.04
 item ubuntu-wily Wily Werewolf 15.10
