@@ -53,12 +53,10 @@ boot
 menu Please choose a release
 item menu (back)
 item ubuntu-trusty Trusty Tahr 14.04 LTS
-item ubuntu-vivid Vivid Vervet 15.04
-item ubuntu-wily Wily Werewolf 15.10
 item ubuntu-xenial Xenial Xerus 16.04 LTS
-item ubuntu-yakkety Yakkety Yak 16.10
-item ubuntu-zesty Zesty Zapus 17.04
 item ubuntu-artful Artful Aardvark 17.10
+item ubuntu-bionic Bionic Beaver 18.04 LTS
+item ubuntu-cosmic Cosmic Cuttlefish 18.10
 choose release && goto ${release}
 
 :ubuntu-trusty
@@ -66,24 +64,9 @@ kernel http://us.archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/cur
 initrd http://us.archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
 boot
 
-:ubuntu-vivid
-kernel http://us.archive.ubuntu.com/ubuntu/dists/vivid/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
-initrd http://us.archive.ubuntu.com/ubuntu/dists/vivid/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
-boot
-
-:ubuntu-wily
-kernel http://us.archive.ubuntu.com/ubuntu/dists/wily/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
-initrd http://us.archive.ubuntu.com/ubuntu/dists/wily/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
-boot
-
-:ubuntu-yakkety
-kernel http://us.archive.ubuntu.com/ubuntu/dists/yakkety/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
-initrd http://us.archive.ubuntu.com/ubuntu/dists/yakkety/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
-boot
-
-:ubuntu-zesty
-kernel http://us.archive.ubuntu.com/ubuntu/dists/zesty/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
-initrd http://us.archive.ubuntu.com/ubuntu/dists/zesty/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
+:ubuntu-xenial
+kernel http://us.archive.ubuntu.com/ubuntu/dists/xenial/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
+initrd http://us.archive.ubuntu.com/ubuntu/dists/xenial/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
 boot
 
 :ubuntu-artful
@@ -91,6 +74,15 @@ kernel http://us.archive.ubuntu.com/ubuntu/dists/artful/main/installer-amd64/cur
 initrd http://us.archive.ubuntu.com/ubuntu/dists/artful/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
 boot
 
+:ubuntu-bionic
+kernel http://us.archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
+initrd http://us.archive.ubuntu.com/ubuntu/dists/bionic/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
+boot
+
+:ubuntu-cosmic
+kernel http://us.archive.ubuntu.com/ubuntu/dists/cosmic/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/linux
+initrd http://us.archive.ubuntu.com/ubuntu/dists/cosmic/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64/initrd.gz
+boot
 
 :tinycore
 kernel memdisk
