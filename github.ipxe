@@ -1,6 +1,6 @@
 #!ipxe
 :retry
-dhcp
+dhcp || config
 show ip
 show gateway
 show dns

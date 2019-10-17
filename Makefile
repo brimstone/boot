@@ -4,9 +4,10 @@ bin/brimstone.iso bin/brimstone.lkrn: github.ipxe ipxe.patch ca.pem
 	&& make CERT=../../ca.pem \
 		TRUST=../../ca.pem \
 		EMBED=../../github.ipxe \
-		bin/ipxe.lkrn bin/ipxe.iso \
-	&& cp bin/ipxe.iso ../../bin/brimstone.iso \
+		bin/ipxe.lkrn bin/ipxe.iso bin-x86_64-efi/ipxe.efi \
+	&& cp bin/ipxe.iso  ../../bin/brimstone.iso \
 	&& cp bin/ipxe.lkrn ../../bin/brimstone.lkrn \
+	&& cp bin-x86_64-efi/ipxe.efi  ../../bin/brimstone.efi \
 	&& patch -p2 -R < ../../ipxe.patch
 
 .PHONY: clean

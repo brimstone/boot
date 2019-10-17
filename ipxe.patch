@@ -21,7 +21,7 @@ index 9f770d09..b8bb0816 100644
  #include <config/named.h>
  #include NAMED_CONFIG(console.h)
 diff --git a/src/config/defaults/pcbios.h b/src/config/defaults/pcbios.h
-index e1915054..af05b468 100644
+index 21821c95..90fac7e6 100644
 --- a/src/config/defaults/pcbios.h
 +++ b/src/config/defaults/pcbios.h
 @@ -13,7 +13,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
@@ -34,7 +34,7 @@ index e1915054..af05b468 100644
  #define UMALLOC_MEMTOP
  #define SMBIOS_PCBIOS
 diff --git a/src/config/general.h b/src/config/general.h
-index fb1ac93f..7621e88b 100644
+index 3c14a2cd..9900ea38 100644
 --- a/src/config/general.h
 +++ b/src/config/general.h
 @@ -35,7 +35,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
@@ -57,3 +57,33 @@ index fb1ac93f..7621e88b 100644
  #undef	DOWNLOAD_PROTO_SLAM	/* Scalable Local Area Multicast */
  #undef	DOWNLOAD_PROTO_NFS	/* Network File System Protocol */
  //#undef DOWNLOAD_PROTO_FILE	/* Local filesystem access */
+@@ -136,24 +136,24 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
+ #define LOGIN_CMD		/* Login command */
+ #define SYNC_CMD		/* Sync command */
+ #define SHELL_CMD		/* Shell command */
+-//#define NSLOOKUP_CMD		/* DNS resolving command */
++#define NSLOOKUP_CMD		/* DNS resolving command */
+ //#define TIME_CMD		/* Time commands */
+ //#define DIGEST_CMD		/* Image crypto digest commands */
+ //#define LOTEST_CMD		/* Loopback testing commands */
+ //#define VLAN_CMD		/* VLAN commands */
+ //#define PXE_CMD		/* PXE commands */
+-//#define REBOOT_CMD		/* Reboot command */
+-//#define POWEROFF_CMD		/* Power off command */
++#define REBOOT_CMD		/* Reboot command */
++#define POWEROFF_CMD		/* Power off command */
+ //#define IMAGE_TRUST_CMD	/* Image trust management commands */
+ //#define PCI_CMD		/* PCI commands */
+ //#define PARAM_CMD		/* Form parameter commands */
+ //#define NEIGHBOUR_CMD		/* Neighbour management commands */
+-//#define PING_CMD		/* Ping command */
++#define PING_CMD		/* Ping command */
+ //#define CONSOLE_CMD		/* Console command */
+ //#define IPSTAT_CMD		/* IP statistics commands */
+ //#define PROFSTAT_CMD		/* Profiling commands */
+ //#define NTP_CMD		/* NTP commands */
+-//#define CERT_CMD		/* Certificate management commands */
++#define CERT_CMD		/* Certificate management commands */
+ 
+ /*
+  * ROM-specific options
