@@ -7,6 +7,7 @@ item centos Centos
 item ubuntu Ubuntu
 item tinycore Tinycore
 item gparted Gparted
+item pcd PCD
 item shell	Open a shell and debug from there
 choose --default reboot --timeout 300000 distro && goto ${distro}
 
@@ -95,4 +96,8 @@ boot
 :gparted
 kernel memdisk
 initrd https://downloads.sourceforge.net/project/gparted/gparted-live-stable/0.28.1-1/gparted-live-0.28.1-1-amd64.iso
+boot
+
+:pcd
+kernel https://github.com/brimstone/pcd/releases/download/0.18.0/pcd-0.18.0.vmlinuz
 boot
