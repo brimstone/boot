@@ -9,6 +9,7 @@ item tinycore Tinycore
 item gparted Gparted
 item pcd PCD
 item shell	Open a shell and debug from there
+item reboot Reboot
 choose --default reboot --timeout 300000 distro && goto ${distro}
 
 :reboot
