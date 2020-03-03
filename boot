@@ -8,7 +8,10 @@ item ubuntu Ubuntu
 item tinycore Tinycore
 item gparted Gparted
 item shell	Open a shell and debug from there
-choose distro && goto ${distro}
+choose --default reboot --timeout 300000 distro && goto ${distro}
+
+:reboot
+reboot
 
 :shell
 shell
